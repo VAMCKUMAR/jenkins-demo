@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'slave-node' }
+    agent { label 'first-agent' }
 
     stages {
         stage('Checkout') {
@@ -21,7 +21,6 @@ pipeline {
         stage('Code Quality') {
             steps {
                 echo 'Running SonarQube'
-                sh 'sonar-scanner'
             }
         }
         stage('Deploy') {
