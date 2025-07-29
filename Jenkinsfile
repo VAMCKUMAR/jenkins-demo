@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Code Quality') {
             steps {
-                echo 'Running SonarQube' > result.txt
+                sh 'echo "Running SonarQube" > result.txt'
             }
         }
         stage('Deploy') {
